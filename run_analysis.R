@@ -63,7 +63,7 @@ dataSet$subject <- as.factor(dataSet$subject)
 
 tidy = aggregate(dataSet, by=list(activity = dataSet$activity, subject=dataSet$subject), mean)
 
-> write.table(tidy, "tidy.txt", sep="\t", row.name=FALSE)
+write.table(tidy, "tidy.txt", sep="\t", row.name=FALSE)
 
 # Task 5
 Library(reshape)
