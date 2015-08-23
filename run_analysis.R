@@ -31,7 +31,7 @@ test[,563] = read.table("./test/subject_test.txt")
 # Merge train and test data
 dataSet <- rbind(test, train)
 # Read features and adopt a format of the variables names for our needs with a help of “gsub” function. 
-features = read.csv("./features.txt")
+features = read.table("./features.txt")
 features[,2] = gsub('-mean', 'Mean', features[,2])
 features[,2] = gsub('-std', 'Std', features[,2])
 features[,2] = gsub('[-()]', '', features[,2])
@@ -53,8 +53,8 @@ colnames(dataSet) <- tolower(colnames(dataSet))
 activityLabels = read.table("./activity_labels.txt")
 
 currentActivity = 1
-for (currentActivityLabel in activityLabels$V2) {
-dataSet$activity <- gsub(currentActivity, currentActivityLabel, dataSet$activity)
+for (c in activityLabels$V2) {
+dataSet$activity <- gsub(currentActivity, c, dataSet$activity)
 currentActivity <- currentActivity + 1
 }
 
