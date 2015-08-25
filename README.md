@@ -28,14 +28,14 @@ test[,563] = read.table("./test/subject_test.txt")
 ```
 
 There is an alternate way to bind x data with y and subject:
-> xtest <- read.table("./test/X_test.txt")
-> ytest <- read.table("./test/y_test.txt")
-> subtest <- read.table("./test/subject_test.txt")
-> ytrain <- read.table("./train/y_train.txt")
-> xtrain <- read.table("./train/X_train.txt")
-> subtrain <- read.table("./train/subject_train.txt")
-> test <- cbind(xtest, ytest, subtest)
-> train <- cbind(xtrain, ytrain, subtrain)
+xtest <- read.table("./test/X_test.txt")
+ytest <- read.table("./test/y_test.txt")
+subtest <- read.table("./test/subject_test.txt")
+ytrain <- read.table("./train/y_train.txt")
+xtrain <- read.table("./train/X_train.txt")
+subtrain <- read.table("./train/subject_train.txt")
+test <- cbind(xtest, ytest, subtest)
+train <- cbind(xtrain, ytrain, subtrain)
 
 Merge train and test data
 ```{r}
