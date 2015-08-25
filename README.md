@@ -3,6 +3,8 @@ This md file explains a code that creates a "tidy2.txt" file, using a zip file w
 
 At the beginning of my code I read all the files given for the task - activity labels, all the measurements of train and test groups. Then I should merge all the train data with each other, and then - all the test data. After that we should bind it together. Then we must add the names of variables (columns) from the "features" file. Then we should add activity type for each measurement - so that they are all activity types for each person (of the 30). After that - select only mean and sd measurements. And then - make an average for all the variables, activities and subjects. 
 
+My code with explanations:
+
 ```{r} 
 getwd()
 if(!file.exists("data")){dir.create("data")}
