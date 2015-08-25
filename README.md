@@ -17,6 +17,7 @@ setwd("./UCI HAR Dataset")
 
 
 Creating a new dataset „train“. There is one disadvantage of my method: I should manually see, #how much columns has this table, to know, what number should new columns have. 
+
 ```{r}
 train = read.table("./train/X_train.txt")
 train[,562] = read.table("./train/Y_train.txt")
